@@ -5,7 +5,7 @@ export default function CharList({ characters }) {
     <>
       <ul aria-label="characters">
         {characters.map((character) => (
-          <li key={character.id}>
+          <li key={character.name}>
             <Link to={`/detail/${character.id}`}>
               <fieldset>
                 <img src={character.photoUrl} alt={character.name} />
