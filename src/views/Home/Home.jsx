@@ -14,7 +14,6 @@ export default function Home() {
       })
       .finally(() => setLoading(false));
   }, []);
-  console.log(characters);
 
   return (
     <main>
