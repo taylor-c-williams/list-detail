@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { getChar } from '../../services/services';
 import CharDetail from '../../components/CharDetail/CharDetail';
+import styles from './DetailView.css';
 
 export default function DetailView() {
   const { id } = useParams();
@@ -15,11 +16,11 @@ export default function DetailView() {
   }, [id]);
 
   return (
-    <>
+    <section className={styles.main}>
       <Link to="/">Back to Catalog</Link>
-      <fieldset>
+      <fieldset className={styles.cardfield}>
         {loading ? 'Loading...' : <CharDetail character={character} />}
       </fieldset>
-    </>
+    </section>
   );
 }

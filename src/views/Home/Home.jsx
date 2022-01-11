@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getAllChars } from '../../services/services';
 import CharList from '../../components/CharList/CharList';
+import styles from './Home.css';
 
 export default function Home() {
   const [characters, setCharacters] = useState(null);
@@ -16,8 +17,8 @@ export default function Home() {
   }, []);
 
   return (
-    <main>
-      Avatar Characters
+    <main className={styles.section}>
+      <h1>Avatar Characters</h1>
       {loading ? 'Loading...' : <CharList characters={characters} />}
     </main>
   );

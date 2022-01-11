@@ -6,12 +6,12 @@ export default function CharList({ characters }) {
       <ul aria-label="characters">
         {characters.map((character) => (
           <li key={character.name}>
-            <Link to={`/detail/${character.id}`}>
-              <fieldset>
+            <fieldset>
+              <Link to={`/detail/${character.id}`}>
                 <img src={character.photoUrl} alt={character.name} />
                 <p>{character.name}</p>
-              </fieldset>
-            </Link>
+              </Link>
+            </fieldset>
           </li>
         ))}
       </ul>
