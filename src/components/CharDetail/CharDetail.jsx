@@ -1,5 +1,4 @@
 export default function CharDetail({ character }) {
-  console.log(character);
   return (
     <>
       <img src={character.photoUrl} alt={character.name} />

@@ -3,7 +3,7 @@ import { getAllChars } from '../../services/services';
 import CharList from '../../components/CharList/CharList';
 
 export default function Home() {
-  const [characters, setCharacters] = useState([]);
+  const [characters, setCharacters] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
