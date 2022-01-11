@@ -8,11 +8,8 @@ export default function CharList({ characters }) {
           <li key={character.id}>
             <Link to={`/detail/${character.id}`}>
               <fieldset>
-                <img src={character.img} alt={character.name} />
+                <img src={character.photoUrl} alt={character.name} />
                 <p>{character.name}</p>
-                <p>{character.affiliation}</p>
-                <p>{character.allies}</p>
-                <p>{character.enemies}</p>
               </fieldset>
             </Link>
           </li>

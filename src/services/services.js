@@ -8,7 +8,7 @@ export const getAllChars = async () => {
       characters: data.map((character) => ({
         id: character._id,
         name: character.name,
-        img: character.photoUrl,
+        photoUrl: character.photoUrl,
         affiliation: character.affiliation,
         allies: character.allies,
         enemies: character.enemies,
