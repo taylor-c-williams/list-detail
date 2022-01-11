@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getAllChars } from '../../services/services';
-import CharList from '../../components/CharList';
+import CharList from '../../components/CharList/CharList';
 
 export default function Home() {
   const [characters, setCharacters] = useState([]);
@@ -8,15 +8,18 @@ export default function Home() {
 
   useEffect(() => {
     setLoading(true);
-    getAllChars().then(() => {
-      setLoading(false);
-    });
+    getAllChars()
+      .then((res) => {
+        setCharacters(res.characters);
+      })
+      .finally(() => setLoading(false));
   }, []);
+  console.log(characters);
 
   return (
-    <>
+    <main>
       Avatar Characters
       {loading ? 'Loading...' : <CharList characters={characters} />}
-    </>
+    </main>
   );
 }
