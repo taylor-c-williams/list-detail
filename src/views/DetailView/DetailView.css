@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Space Mono', monospace;
+  text-align: center;
+}
+
+.cardfield {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+fieldset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: red;
+}
+a:hover {
+  color: purple;
+  text-decoration: underline dotted;
+  text-underline-offset: 10px;
+}
+
+a:hover img {
+  opacity: 0.5;
+}
